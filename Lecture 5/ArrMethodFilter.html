@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>filter() Method</title>
+</head>
+
+<body style="background-color:#020617; color:#e2e8f0; font-family:Segoe UI; padding:30px;">
+
+    <h1 style="color:#f97316;">Some More Array Methods - filter()</h1>
+
+    <p>
+        <b>Eg:</b> all even elements
+    </p>
+
+    <p>
+        Creates a new array of elements that give <b>true</b> for a condition (filter).
+    </p>
+
+    <p style="color:#38bdf8;">
+        arr.filter(callbackFn(value, index, array))
+    </p>
+
+    <pre style="background-color:#000; color:#22c55e; padding:15px;">
+let arr = [1, 2, 3, 4, 5, 6];
+
+let newArr = arr.filter((val) => {
+    return val % 2 === 0;
+});
+
+console.log(newArr);
+    </pre>
+<script src="ArrMethodFilter.js"></script>
+</body>
+</html>

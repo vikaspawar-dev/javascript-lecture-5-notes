@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>JavaScript Notes - Practice</title>
+
+    <style>
+        body {
+            margin: 0;
+            padding: 40px;
+            font-family: Arial, Helvetica, sans-serif;
+            background: #0f172a;
+            color: #e2e8f0;
+            line-height: 1.7;
+        }
+
+        h1 {
+            text-align: center;
+            color: #38bdf8;
+        }
+
+        h2 {
+            color: #22c55e;
+            margin-top: 30px;
+        }
+
+        p {
+            color: #cbd5f5;
+        }
+
+        .code {
+            background: #020617;
+            padding: 12px;
+            border-radius: 6px;
+            margin: 10px 0;
+            color: #22c55e;
+            font-family: monospace;
+            border-left: 4px solid #22c55e;
+        }
+
+        hr {
+            border: 0;
+            height: 1px;
+            background: #1e293b;
+            margin: 25px 0;
+        }
+    </style>
+</head>
+<body>
+
+    <h1>Let’s Practice</h1>
+
+    <h2>Function (using function keyword)</h2>
+
+    <p>
+        Create a function that takes a string as an argument and returns 
+        the number of vowels in the string.
+    </p>
+
+    <div class="code">
+function countVowels(str) { <br>
+&nbsp;&nbsp;let count = 0; <br><br>
+
+&nbsp;&nbsp;for (let char of str) { <br>
+&nbsp;&nbsp;&nbsp;&nbsp;if ("aeiouAEIOU".includes(char)) { <br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;count++; <br>
+&nbsp;&nbsp;&nbsp;&nbsp;} <br>
+&nbsp;&nbsp;} <br><br>
+
+&nbsp;&nbsp;return count; <br>
+}
+    </div>
+
+    <hr>
+
+    <h2>Arrow Function</h2>
+
+    <p>
+        Create an arrow function to perform the same task.
+    </p>
+
+    <div class="code">
+const countVowels = (str) => { <br>
+&nbsp;&nbsp;let count = 0; <br><br>
+
+&nbsp;&nbsp;for (let char of str) { <br>
+&nbsp;&nbsp;&nbsp;&nbsp;if ("aeiouAEIOU".includes(char)) { <br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;count++; <br>
+&nbsp;&nbsp;&nbsp;&nbsp;} <br>
+&nbsp;&nbsp;} <br><br>
+
+&nbsp;&nbsp;return count; <br>
+};
+    </div>
+<script src="LetsPractice1.js"></script>
+</body>
+</html>

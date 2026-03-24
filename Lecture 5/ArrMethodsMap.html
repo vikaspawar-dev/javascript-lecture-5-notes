@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Array Method - map()</title>
+
+    <style>
+        body {
+            background-color: #020617;
+            color: #e2e8f0;
+            font-family: "Segoe UI", sans-serif;
+            padding: 40px;
+            line-height: 1.7;
+        }
+
+        h1 {
+            color: #22c55e;
+            border-bottom: 2px solid #22c55e;
+            padding-bottom: 8px;
+        }
+
+        h2 {
+            color: #38bdf8;
+            margin-top: 25px;
+        }
+
+        p {
+            color: #cbd5f5;
+        }
+
+        code {
+            background-color: #1e293b;
+            color: #facc15;
+            padding: 4px 8px;
+            border-radius: 5px;
+        }
+
+        pre {
+            background-color: #000;
+            color: #a3e635;
+            padding: 15px;
+            border-radius: 8px;
+            border-left: 4px solid #22c55e;
+            overflow-x: auto;
+        }
+
+        ul {
+            margin-top: 10px;
+        }
+
+        li {
+            margin-bottom: 6px;
+        }
+    </style>
+</head>
+
+<body>
+
+    <h1>Some More Array Methods - map()</h1>
+
+    <h2>Definition</h2>
+    <p>
+        <b>map()</b> creates a <b>new array</b> with the results of some operation.
+        The values returned by its callback function are used to form the new array.
+    </p>
+
+    <h2>Syntax</h2>
+    <p><code>arr.map(callbackFn(value, index, array))</code></p>
+
+    <h2>Example</h2>
+
+    <pre>
+let arr = [1, 2, 3, 4];
+
+let newArr = arr.map((val) => {
+    return val * 2;
+});
+
+console.log(newArr);
+    </pre>
+
+    <h2>Key Points</h2>
+    <ul>
+        <li>Returns a new array</li>
+        <li>Does not change original array</li>
+        <li>Used for transformation</li>
+    </ul>
+<script src="ArrMethodsMap.js"></script>
+</body>
+</html>

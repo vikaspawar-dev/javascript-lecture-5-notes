@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Practice Questions</title>
+  <style>body {
+    background-color: #020617;
+    color: #e2e8f0;
+    font-family: "Segoe UI", sans-serif;
+    padding: 40px;
+    line-height: 1.7;
+}
+
+h1 {
+    color: #f472b6;
+    border-bottom: 2px solid #f472b6;
+    padding-bottom: 8px;
+}
+
+h2 {
+    color: #38bdf8;
+    margin-top: 25px;
+}
+
+h3 {
+    color: #22c55e;
+    margin-top: 30px;
+}
+
+p {
+    color: #cbd5f5;
+}
+
+pre {
+    background-color: #000;
+    color: #a3e635;
+    padding: 15px;
+    border-radius: 8px;
+    border-left: 4px solid #f472b6;
+    overflow-x: auto;
+}</style>
+</head>
+
+<body>
+
+    <h1>Let’s Practice</h1>
+
+    <h2>Q1. Filter Marks (90+)</h2>
+    <p>
+        We are given an array of marks of students. Filter out the marks of students 
+        that scored <b>90+</b>.
+    </p>
+
+    <pre>
+let marks = [85, 92, 78, 96, 88, 91];
+
+let toppers = marks.filter((val) => {
+    return val >= 90;
+});
+
+console.log(toppers);
+    </pre>
+
+    <h2>Q2. Product using reduce()</h2>
+    <p>
+        Use the <b>reduce()</b> method to calculate the product of all numbers in the array.
+    </p>
+
+    <pre>
+let numbers = [1, 2, 3, 4];
+
+let product = numbers.reduce((acc, val) => {
+    return acc * val;
+}, 1);
+
+console.log(product);
+    </pre>
+
+    <h2>Q3. Sum from 1 to n</h2>
+    <p>
+        Take a number <b>n</b> as input from user. Create an array from 1 to n and 
+        calculate the sum using <b>reduce()</b>.
+    </p>
+
+    <pre>
+let n = 5;
+
+let arr = [];
+
+for (let i = 1; i <= n; i++) {
+    arr.push(i);
+}
+
+let sum = arr.reduce((acc, val) => {
+    return acc + val;
+}, 0);
+
+console.log(sum);
+    </pre>
+
+<script src="LetsPractice3.js"></script>
+</body>
+</html>

@@ -1,0 +1,352 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>JavaScript Notes - Lecture 5</title>
+
+    <style>
+        body {
+            margin: 0;
+            padding: 40px;
+            font-family: "Segoe UI", sans-serif;
+            background: #020617;
+            color: #e5e7eb;
+            line-height: 1.8;
+        }
+
+        h1 {
+            text-align: center;
+            color: #60a5fa;
+            margin-top: 25px;
+        }
+
+        h2 {
+            color: #22d3ee;
+            margin-top: 30px;
+        }
+
+        h3 {
+            color: #a78bfa;
+        }
+
+        p {
+            color: #cbd5f5;
+        }
+
+        code {
+            background: #0f172a;
+            color: #facc15;
+            padding: 4px 8px;
+            border-radius: 5px;
+        }
+
+        .code, pre {
+            background: #0f172a;
+            padding: 15px;
+            border-radius: 10px;
+            color: #4ade80;
+            font-family: monospace;
+            border-left: 4px solid #22c55e;
+            margin-top: 10px;
+            overflow-x: auto;
+        }
+
+        .output {
+            background: #0f172a;
+            padding: 12px;
+            border-radius: 10px;
+            color: #22c55e;
+            font-family: monospace;
+            border-left: 4px solid #4ade80;
+        }
+
+        hr {
+            border: none;
+            height: 1px;
+            background: #1e293b;
+            margin: 30px 0;
+        }
+
+        .btn {
+            display: inline-block;
+            margin-top: 15px;
+            padding: 10px 18px;
+            background: linear-gradient(90deg, #22c55e, #16a34a);
+            color: white;
+            text-decoration: none;
+            border-radius: 8px;
+            font-weight: bold;
+            transition: 0.3s;
+        }
+
+        .btn:hover {
+            transform: scale(1.05);
+            box-shadow: 0 0 10px #22c55e;
+        }
+
+        ul li {
+            margin: 6px 0;
+        }
+
+        .footer {
+            text-align: center;
+            margin-top: 40px;
+            color: #64748b;
+        }
+    </style>
+</head>
+
+<body>
+
+    <h1>JavaScript - Functions</h1>
+
+    <h2>What is a Function?</h2>
+    <h3>Chapter 4 | Function in Js</h3>
+    <p>
+        A function is a <b>block of code</b> that performs a specific task
+        and can be <b>called whenever needed</b>.
+    </p>
+
+    <hr>
+
+    <h2>Example 1</h2>
+
+    <div class="code">
+        function greet() { <br>
+        &nbsp;&nbsp;console.log("Hello World"); <br>
+        } <br><br>
+
+        greet();
+    </div>
+
+    <p><b>Output:</b></p>
+    <div class="output">
+        Hello World
+    </div>
+
+    <hr>
+
+    <h2>Example 2 (With Parameters)</h2>
+
+    <div class="code">
+        function sum(a, b) { <br>
+        &nbsp;&nbsp;console.log(a + b); <br>
+        } <br><br>
+
+        sum(5, 3);
+    </div>
+
+    <p><b>Input:</b> 5, 3</p>
+
+    <p><b>Output:</b></p>
+    <div class="output">
+        8
+    </div>
+
+    <h2>Function Definition</h2>
+
+    <div class="code">
+        function functionName() { <br>
+        &nbsp;&nbsp;// do some work <br>
+        }
+    </div>
+
+    <div class="code">
+        function functionName(param1, param2) { <br>
+        &nbsp;&nbsp;// do some work <br>
+        }
+    </div>
+
+    <hr>
+
+    <h2>Function Call</h2>
+
+    <div class="code">
+        functionName();
+    </div>
+
+    <a href="http://127.0.0.1:5500/Lecture%205/FunctionJS.html" class="btn">Explore Functions</a>
+
+    <h1>Arrow Functions</h1>
+
+    <h2>Definition</h2>
+
+    <div class="code">
+        const functionName = (param1, param2) => { <br>
+        &nbsp;&nbsp;// do some work <br>
+        }
+    </div>
+
+    <p>Compact way of writing a function</p>
+
+    <hr>
+
+    <h2>Example</h2>
+
+    <div class="code">
+        const sum = (a, b) => { <br>
+        &nbsp;&nbsp;return a + b; <br>
+        }
+    </div>
+
+    <a href="http://127.0.0.1:5500/Lecture%205/ArrowFunJs.html" class="btn">Arrow Functions</a>
+
+    <br>
+
+    <h1>Let’s Practice</h1>
+
+    <h2>Question</h2>
+    <p>
+        Qs.1 Create a function using the <b>function keyword</b> that takes a string as an argument
+        and returns the number of vowels in the string.
+    </p>
+
+    <br>
+
+    <p>Qs.2 Create an arrow function to perform the same task.</p>
+
+    <a href="http://127.0.0.1:5500/Lecture%205/LetsPractice1.html" class="btn">Solution</a>
+
+    <div>
+        <h1>forEach Loop in Arrays(Higher Order Function /Method)</h1>
+
+        <h2>Syntax</h2>
+        <p><code>arr.forEach(callbackFunction)</code></p>
+
+        <h2>Callback Function</h2>
+        <p>
+            A <b>callback function</b> is a function that is passed as an argument
+            to another function and executed later.
+        </p>
+
+        <h2>Explanation</h2>
+        <ul>
+            <li><code>forEach()</code> is used to loop through an array</li>
+            <li>It executes a function for each element</li>
+            <li>It does not return a new array</li>
+        </ul>
+
+        <h2>Example</h2>
+
+        <pre>
+let arr = [1, 2, 3, 4, 5];
+
+arr.forEach((val) => {
+    console.log(val);
+});
+        </pre>
+
+        <a href="http://127.0.0.1:5500/Lecture%205/ForEchLoop.html" class="btn">forEach Loop</a>
+
+        <div>
+            <h1>Let’s Practice</h1>
+
+            <p>
+                <b>Qs.</b> For a given array of numbers, print the square of each value
+                using the <code>forEach()</code> loop.
+            </p>
+
+            <pre>
+let numbers = [1, 2, 3, 4, 5];
+
+numbers.forEach((num) => {
+    console.log(num * num);
+});
+            </pre>
+        </div>
+    </div>
+
+    <a href="http://127.0.0.1:5500/Lecture%205/LetsPractice2.html" class="btn">Solution</a>
+
+    <br>
+
+    <h1 style="color:#22c55e;">Some More Array Methods - map()</h1>
+
+    <p>
+        Creates a new array with the results of some operation.
+        The values its callback returns are used to form a new array.
+    </p>
+
+    <p style="color:#38bdf8;">
+        arr.map( callbackFn(value, index, array) )
+    </p>
+
+    <pre>
+let arr = [1, 2, 3];
+
+let newArr = arr.map((val) => {
+    return val * 2;
+});
+    </pre>
+
+    <a href="http://127.0.0.1:5500/Lecture%205/ArrMethodsMap.html" class="btn">map()</a>
+
+    <div>
+        <h1 style="color:#f97316;">Some More Array Methods - filter()</h1>
+
+        <p><b>Eg:</b> all even elements</p>
+
+        <p>
+            Creates a new array of elements that give <b>true</b> for a condition (filter).
+        </p>
+
+        <p style="color:#38bdf8;">
+            arr.filter(callbackFn(value, index, array))
+        </p>
+
+        <pre>
+let newArr = arr.filter((val) => {
+    return val % 2 === 0;
+});
+        </pre>
+    </div>
+
+    <a href="http://127.0.0.1:5500/Lecture%205/ArrMethodFilter.html" class="btn">filter()</a>
+
+    <br>
+
+    <h1>Some More Array Methods - reduce()</h1>
+
+    <p>
+        Performs some operations & reduces the array to a <b>single value</b>.
+        It returns that single value.
+    </p>
+
+    <pre>
+let arr = [1, 2, 3, 4];
+
+let sum = arr.reduce((acc, val) => {
+    return acc + val;
+}, 0);
+    </pre>
+
+    <a href="http://127.0.0.1:5500/Lecture%205/ArrMethReduce.html" class="btn">reduce()</a>
+
+    <br>
+
+    <div>
+        <h1>Let’s Practice</h1>
+
+        <p>
+            Qs 1.We are given an array of marks of students. Filter out the marks of students
+            that scored <b>90+</b>.
+        </p>
+
+        <p>
+            Qs. Take a number n as input from user. Create an array of numbers from 1 to n.
+            Use the reduce method to calculate product of all numbers.
+            Use the reduce method to calculate sum of all numbers.
+        </p>
+    </div>
+
+    <a href="http://127.0.0.1:5500/Lecture%205/LetsPractice3.html" class="btn">Solution</a>
+
+    <div class="footer">
+        © JavaScript Notes | Lecture 5
+    </div>
+
+</body>
+
+</html>

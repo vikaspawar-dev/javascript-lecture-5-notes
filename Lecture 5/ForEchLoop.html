@@ -1,0 +1,147 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>forEach Loop in Arrays</title>
+
+    <style>
+        body {
+            background-color: #0f172a;
+            color: #e2e8f0;
+            font-family: "Segoe UI", sans-serif;
+            line-height: 1.7;
+            padding: 40px;
+        }
+
+        h1 {
+            color: #f472b6;
+            border-bottom: 2px solid #f472b6;
+            padding-bottom: 8px;
+        }
+
+        h2 {
+            color: #38bdf8;
+            margin-top: 25px;
+        }
+
+        p {
+            color: #cbd5f5;
+        }
+
+        code {
+            background-color: #1e293b;
+            color: #facc15;
+            padding: 4px 8px;
+            border-radius: 5px;
+        }
+
+        pre {
+            background-color: #020617;
+            color: #22c55e;
+            padding: 15px;
+            border-radius: 8px;
+            overflow-x: auto;
+            border-left: 4px solid #f472b6;
+        }
+
+        ul {
+            margin-top: 10px;
+        }
+
+        li {
+            margin-bottom: 6px;
+        }
+    </style>
+</head>
+
+<body>
+
+    <h1>forEach Loop in Arrays(Higher Order Function /Method)</h1>
+
+    <h2>Syntax</h2>
+    <p><code>arr.forEach(callbackFunction)</code></p>
+
+    <h2>Callback Function</h2>
+    <p>
+        A <b>callback function</b> is a function that is passed as an argument 
+        to another function and executed later.
+    </p>
+
+    <h2>Explanation</h2>
+    <ul>
+        <li><code>forEach()</code> is used to loop through an array</li>
+        <li>It executes a function for each element</li>
+        <li>It does not return a new array</li>
+    </ul>
+
+    <h2>Example</h2>
+
+    <pre>
+let arr = [1, 2, 3, 4, 5];
+
+arr.forEach((val) => {
+    console.log(val);
+});
+    </pre>
+
+   <pre> <p><i>Higher Order Function (HOF) – JavaScript
+📌 Definition
+
+Higher Order Function wo function hota hai jo:
+
+kisi function ko argument (parameter) me leta hai
+ya
+kisi function ko return karta hai
+🧠 Simple words me:
+
+Function jo dusre function ke sath kaam kare = Higher Order Function
+
+🔹 Example 1 (Function as Argument)
+function greet(name) {
+    return "Hello " + name;
+}
+
+function processUser(callback) {
+    console.log(callback("Vikas"));
+}
+
+processUser(greet);
+
+👉 Yaha greet ek function hai jo processUser me pass ho raha hai
+👉 Isliye processUser = Higher Order Function
+
+🔹 Example 2 (Function Returning Function)
+function multiplier(x) {
+    return function(y) {
+        return x * y;
+    };
+}
+
+let double = multiplier(2);
+console.log(double(5)); // 10
+
+👉 Yaha function ek aur function return kar raha hai
+👉 Ye bhi Higher Order Function hai
+
+🔹 Real Life Example (Array Methods)
+let arr = [1, 2, 3];
+
+arr.forEach((val) => {
+    console.log(val);
+});
+
+👉 forEach() ek Higher Order Function hai
+👉 Kyunki ye ek function (callback) ko accept karta hai
+
+✅ Important Points
+Callback function = function jo pass hota hai
+HOF = function jo callback use karta hai
+Common HOF:
+forEach()
+map()
+filter()
+reduce()</i></p></pre>
+<script src="ForEchLoop.js"></script>
+</body>
+</html>

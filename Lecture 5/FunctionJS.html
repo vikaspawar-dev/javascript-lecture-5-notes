@@ -1,0 +1,133 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>JavaScript Notes - Lecture 5</title>
+
+    <style>
+        body {
+            margin: 0;
+            padding: 40px;
+            font-family: Arial, Helvetica, sans-serif;
+            background: #0f172a;
+            color: #e2e8f0;
+            line-height: 1.7;
+        }
+
+        h1 {
+            text-align: center;
+            color: #168bf9;
+        }
+
+        h2 {
+            color: #38bdf8;
+            margin-top: 30px;
+        }
+
+        p {
+            margin: 10px 0;
+            color: #cbd5f5;
+        }
+
+        .code {
+            background: #020617;
+            padding: 12px;
+            border-radius: 6px;
+            margin: 10px 0;
+            color: #22c55e;
+            font-family: monospace;
+            border-left: 4px solid #16a34a;
+        }
+
+        .output {
+            background: #020617;
+            padding: 12px;
+            border-radius: 6px;
+            margin-top: 5px;
+            color: #facc15;
+            font-family: monospace;
+            border-left: 4px solid #eab308;
+        }
+
+        hr {
+            border: 0;
+            height: 1px;
+            background: #1e293b;
+            margin: 25px 0;
+        }
+    </style>
+</head>
+<body>
+
+    <h1>JavaScript - Functions</h1>
+
+    <h2>1.What is a Function?</h2>
+
+    <p>
+        A function is a <b>block of code</b> that performs a specific task 
+        and can be <b>executed whenever required</b>.
+    </p>
+
+    <hr>
+
+    <h2>Example 1</h2>
+
+    <div class="code">
+function sayName() { <br>
+&nbsp;&nbsp;console.log("My Name is Vikas"); <br>
+} <br><br>
+
+sayName();
+    </div>
+
+    <p><b>Output:</b></p>
+    <div class="output">
+My Name is Vikas
+    </div>
+
+    <hr>
+
+    <h2>Example 2 (With Parameters)</h2>
+
+    <div class="code">
+function multiply(x, y) { <br>
+&nbsp;&nbsp;console.log(x * y); <br>
+} <br><br>
+
+multiply(4, 5);
+    </div>
+
+    <p><b>Input:</b> 4, 5</p>
+
+    <p><b>Output:</b></p>
+    <div class="output">
+20
+    </div>
+
+  
+
+    <h2>2.Function Definition</h2>
+
+    <div class="code">
+function functionName() { <br>
+&nbsp;&nbsp;// do some work <br>
+}
+    </div>
+
+    <div class="code">
+function functionName(param1, param2) { <br>
+&nbsp;&nbsp;// do some work <br>
+}
+    </div>
+
+    <hr>
+
+    <h2>Function Call</h2>
+
+    <div class="code">
+functionName();
+    </div>
+<script src="FunctionJS.js"></script>
+</body>
+</html>

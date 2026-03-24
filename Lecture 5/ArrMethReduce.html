@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>reduce() Method</title>
+   <style>
+    body {
+    background-color: #020617;
+    color: #e2e8f0;
+    font-family: "Segoe UI", sans-serif;
+    padding: 40px;
+    line-height: 1.7;
+}
+
+h1 {
+    color: #eab308;
+    border-bottom: 2px solid #eab308;
+    padding-bottom: 8px;
+}
+
+h2 {
+    color: #38bdf8;
+    margin-top: 25px;
+}
+
+p {
+    color: #cbd5f5;
+}
+
+.syntax {
+    color: #22c55e;
+    font-weight: bold;
+}
+
+pre {
+    background-color: #000;
+    color: #a3e635;
+    padding: 15px;
+    border-radius: 8px;
+    border-left: 4px solid #eab308;
+    overflow-x: auto;
+}
+   </style>
+</head>
+<script src="ArrMethReduce.js"></script>
+<body>
+
+    <h1>Some More Array Methods - reduce()</h1>
+
+    <p>
+        Performs some operations & reduces the array to a <b>single value</b>. 
+        It returns that single value.
+    </p>
+
+    <p class="syntax">
+        arr.reduce(callbackFn(accumulator, currentValue))
+    </p>
+
+    <h2>Description</h2>
+    <p>
+        The <b>reduce()</b> method executes a callback function on each element 
+        and stores the result in an <b>accumulator</b>. Finally, it returns a single value.
+    </p>
+
+    <h2>Example (Sum of Array)</h2>
+
+    <pre>
+let arr = [1, 2, 3, 4];
+
+let sum = arr.reduce((acc, val) => {
+    return acc + val;
+}, 0);
+
+console.log(sum);
+    </pre>
+
+    <h2>Explanation</h2>
+    <p>
+        acc = accumulator<br>
+        val = current value<br><br>
+
+        Step 1: acc = 0 + 1 = 1<br>
+        Step 2: acc = 1 + 2 = 3<br>
+        Step 3: acc = 3 + 3 = 6<br>
+        Step 4: acc = 6 + 4 = 10<br><br>
+
+        Final Output: <b>10</b>
+    </p>
+
+</body>
+</html>
